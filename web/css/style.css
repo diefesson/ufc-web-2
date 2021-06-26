@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #3A2F91;
+    --text-color: #121521CC;
+    --text-color-80: #121521CC;
+    --text-color-60: #12152199;
+    --border-color: #121521EE;
+    --background-color: #FFFFFF;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--background-color);
+}
+
+.top-bar {
+    height: fit-content;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 600;
+    position: sticky;
+    top: 0px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.ads-form {
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.ads-form-field {
+    position: relative;
+    width: fit-content;
+    margin-top: 10px;
+    border-color: var(--border-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.ads-form-field:focus-within {
+    border-color: var(--primary-color);
+    transition-duration: 0.3s;
+}
+
+.ads-form-field label {
+    position: absolute;
+    font-size: 0.6em;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    left: 7px;
+    top: -6px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ads-form-field span {
+    position: absolute;
+    right: 3px;
+    color: var(--text-color-60);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ads-form-field input {
+    background-color: var(--background-color);
+    border-width: 0px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: var(--text-color-80);
+}
+
+.ads-form-field input:focus {
+    border-width: 0px;
+}
+
+.ads-form-buttons {
+    margin-top: 15px;
+}
+
+.ads-form-buttons button {
+    background-color: var(--primary-color);
+    border-width: 0px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.headline-01 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: var(--text-color)
+}
+
+.ads-list {
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.ads-list-content {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.ads img {
+    width: 300px;
+    max-height: 300px;
+}
+
+.ads label {
+    display: block;
+    font-family: sans-serif;
+    font-size: 16pt;
+    margin-top: 5px;
+    color: var(--text-color-80)
+}

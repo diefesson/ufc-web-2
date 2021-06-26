@@ -1,68 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <title>Diefesson Imoveis</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!-- Top squares-->
-    <div class="top-square">
-        <label>Diefesson<br />Imoveis</label>
+    <div id="app">
+        <!-- Top bar-->
+        <div class="top-bar">
+            Diefesson Imoveis
+        </div>
+
+        <!-- Ads form -->
+        <div class="ads-form">
+            <label class="headline-01">Inserir anúncio</label>
+            <div class="ads-form-field">
+                <label>Titulo</label>
+                <input v-model="title" type="text" />
+            </div>
+            <div class="ads-form-field">
+                <label>Descrição</label>
+                <input v-model="description" type="text" />
+            </div>
+            <div class="ads-form-field">
+                <label>Quartos</label>
+                <input v-model="rooms" type="number" />
+            </div>
+            <div class="ads-form-field">
+                <label>Vagas de caragem</label>
+                <input v-model="parkingSpaces" type="number" />
+            </div>
+            <div class="ads-form-field">
+                <label>Área do terreno</label>
+                <input v-model="terrainArea" type="number" />
+                <span>Km<sup>2</sup></span>
+            </div>
+            <div class="ads-form-field">
+                <label>Área construida</label>
+                <input v-model="buildingArea" type="number" />
+                <span>Km<sup>2</sup></span>
+            </div>
+            <div class="ads-form-field">
+                <label>Localidade</label>
+                <input v-model="localization" type="text" />
+            </div>
+            <div class="ads-form-field">
+                <label>Preço</label>
+                <input v-model="price" type="number" />
+                <span>R$</span>
+            </div>
+            <div class="ads-form-field">
+                <label>URL da imagem</label>
+                <input v-model="imageUrl" type="url" />
+            </div>
+
+            <div class="ads-form-buttons">
+                <button v-on:click="loadAdsList()">CARREGAR</button>
+                <button v-on:click="clearAdsForm()">LIMPAR FORM</button>
+                <button v-on:click="clearAdsList()">LIMPAR LISTA</button>
+                <button v-on:click="addAds()">INSERIR</button>
+            </div>
+        </div>
+
+        <!-- Ads list -->
+        <div class="ads-list">
+            <label class="headline-01">Anúncios</label>
+            <div class="ads-list-content" v-for="ads in adsList">
+                <div class="ads">
+                    <img v-bind:src="ads.imageUrl" />
+                    <label>Titulo: {{ads.title}}</label>
+                    <label>Descrição: {{ads.description}}</label>
+                    <label>Quartos:{{ads.rooms}}</label>
+                    <label>Vagas de caragem: {{ads.parkingSpaces}}</label>
+                    <label>Área do terreno: {{ads.terrainArea}}</label>
+                    <label>Área construida: {{ads.buildingArea}}</label>
+                    <label>Localidade: {{ads.localization}}</label>
+                    <label>Preço: {{ads.price}}</label>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Input form-->
-    <label class="headline-01">Inserir anúncio</label>
-    <div class="input headline-02">
-        <label>Titulo:</label>
-        <input id="titleInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Descrição:</label>
-        <input id="descriptionInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Quartos:</label>
-        <input id="roomsInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Vagas de caragem:</label>
-        <input id="parkingSpacesInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Área do terreno:</label>
-        <input id="terrainAreaInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Área construida:</label>
-        <input id="buildingAreaInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Localidade:</label>
-        <input id="localizationInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Preço:</label>
-        <input id="priceInput" type="text" />
-    </div>
-    <div class="input">
-        <label>Imagem:</label>
-        <input id="imageInput" type="text" />
-    </div>
-
-    <div>
-        <button class="button" onclick="clearAdsForm()">LIMPAR FORM</button>
-        <button class="button" onclick="clearAdsList()">LIMPAR LISTA</button>
-        <button  class="button" onclick="createAds()">INSERIR</button>
-    </div>
-
-    <label class="headline-01">Lista de anúncios</label>
-
-    <div id="adsList"></div>
-
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

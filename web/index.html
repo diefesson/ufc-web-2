@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diefesson Imoveis</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Top squares-->
+    <div class="top-square">
+        <label>Diefesson<br />Imoveis</label>
+    </div>
+
+    <!-- Input form-->
+    <label class="headline-01">Inserir anúncio</label>
+    <div class="input headline-02">
+        <label>Titulo:</label>
+        <input id="titleInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Descrição:</label>
+        <input id="descriptionInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Quartos:</label>
+        <input id="roomsInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Vagas de caragem:</label>
+        <input id="parkingSpacesInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Área do terreno:</label>
+        <input id="terrainAreaInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Área construida:</label>
+        <input id="buildingAreaInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Localidade:</label>
+        <input id="localizationInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Preço:</label>
+        <input id="priceInput" type="text" />
+    </div>
+    <div class="input">
+        <label>Imagem:</label>
+        <input id="imageInput" type="text" />
+    </div>
+
+    <div>
+        <button class="button" onclick="clearAdsForm()">LIMPAR FORM</button>
+        <button class="button" onclick="clearAdsList()">LIMPAR LISTA</button>
+        <button  class="button" onclick="createAds()">INSERIR</button>
+    </div>
+
+    <label class="headline-01">Lista de anúncios</label>
+
+    <div id="adsList"></div>
+
+</body>
+
+</html>

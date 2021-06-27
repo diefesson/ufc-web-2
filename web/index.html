@@ -5,65 +5,61 @@
     <title>Diefesson Imoveis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
     <div id="app">
         <!-- Top bar-->
-        <div class="top-bar">
-            Diefesson Imoveis
+        <div class="navbar bg-primary">
+            <span class="navbar-brand">Diefesson Imoveis</span>
         </div>
 
         <!-- Ads form -->
         <div class="ads-form">
             <label class="headline-01">Inserir anúncio</label>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Titulo</label>
-                <input v-model="title" type="text" />
+                <input class="form-control" v-model="title" type="text" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Descrição</label>
-                <input v-model="description" type="text" />
+                <input class="form-control" v-model="description" type="text" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Quartos</label>
-                <input v-model="rooms" type="number" />
+                <input class="form-control" v-model="rooms" type="number" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Vagas de caragem</label>
-                <input v-model="parkingSpaces" type="number" />
+                <input class="form-control" v-model="parkingSpaces" type="number" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Área do terreno</label>
-                <input v-model="terrainArea" type="number" />
-                <span>Km<sup>2</sup></span>
+                <input class="form-control" v-model="terrainArea" type="number" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Área construida</label>
-                <input v-model="buildingArea" type="number" />
-                <span>Km<sup>2</sup></span>
+                <input class="form-control" v-model="buildingArea" type="number" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Localidade</label>
-                <input v-model="localization" type="text" />
+                <input class="form-control" v-model="localization" type="text" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>Preço</label>
-                <input v-model="price" type="number" />
-                <span>R$</span>
+                <input class="form-control" v-model="price" type="number" />
             </div>
-            <div class="ads-form-field">
+            <div class="form-group">
                 <label>URL da imagem</label>
-                <input v-model="imageUrl" type="url" />
+                <input class="form-control" v-model="imageUrl" type="url" />
             </div>
-
             <div class="ads-form-buttons">
-                <button v-on:click="loadAdsList()">CARREGAR</button>
-                <button v-on:click="clearAdsForm()">LIMPAR FORM</button>
-                <button v-on:click="clearAdsList()">LIMPAR LISTA</button>
-                <button v-on:click="addAds()">INSERIR</button>
+                <button class="btn btn-secondary" v-on:click="loadAdsList()">CARREGAR</button>
+                <button class="btn btn-secondary" v-on:click="clearAdsForm()">LIMPAR FORM</button>
+                <button class="btn btn-secondary" v-on:click="clearAdsList()">LIMPAR LISTA</button>
+                <button class="btn btn-primary" v-on:click="addAds()">INSERIR</button>
             </div>
         </div>
 
@@ -87,6 +83,8 @@
 
     </div>
 
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/script.js"></script>
 </body>

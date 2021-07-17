@@ -1,2 +1,2 @@
-# web-practice
-Project for practices of the discipline of Software Development for the Web
+# web-2
+Project of the Software Development for the Web course
